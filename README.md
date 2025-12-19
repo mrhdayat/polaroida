@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Polaroida 📸
 
-## Getting Started
+**Polaroida** is a minimalist visual photo journal designed to capture moments with the aesthetic charm of analog photography. Built with modern web technologies, it focuses on simplicity, visual storytelling, and a premium user experience.
 
-First, run the development server:
+![Polaroida Banner](./public/opengraph-image.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Core Functionality
+-   **Visual Feed**: An immersive, grid-based or timeline feed of your memories.
+-   **Photo Uploads**: easy drag-and-drop or camera capture uploads.
+-   **Location Mapping**: Interact with your memories on a global map.
+-   **Albums & Organization**: Group photos into thematic collections.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🎨 Customization (New!)
+-   **Visual Style Themes**: Choose from 6 distinct aesthetic themes that transform the entire application:
+    -   **Classic White**: Clean, timeless Polaroid look.
+    -   **Vintage Film**: Warm, nostalgic tones.
+    -   **Minimal Black**: Bold, gallery-inspired dark mode.
+    -   **Pastel Dream**: Soft, dreamy aesthetics.
+    -   **Darkroom Red**: Intense, safe-light inspired.
+    -   **Monochrome**: Pure black and white contrast.
+-   **Dynamic Frame Styles**: Polaroid frames adapt intelligently to your chosen theme.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🛡️ Production Security & Performance (Added!)
+1.  **Strict Content Security Policy**: Middleware-protected headers to prevent XSS and injection attacks.
+2.  **SEO Optimization**: Automatic `sitemap.xml` and `robots.txt` generation.
+3.  **PWA Support**: Installable on mobile devices via Web Manifest.
+4.  **Open Graph Protocol**: Dynamic social sharing cards.
+5.  **Global Error Handling**: Graceful error boundaries and custom 404 pages.
+6.  **Optimized Performance**: Next.js 14 compiler optimizations and strict caching policies.
+7.  **Input Validation**: Zod-based schema validation for data integrity.
+8.  **Responsive Design**: Fluid layouts that adapt to any device.
+9.  **Secure Authentication**: Powered by Supabase Auth (Row Level Security enabled).
+10. **Accessibility**: Semantic HTML and ARIA labels for better screen reader support.
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+-   **Framework**: Next.js 16 (App Router)
+-   **Language**: TypeScript
+-   **Styling**: Tailwind CSS (v4)
+-   **Database**: Supabase (PostgreSQL)
+-   **Animations**: Framer Motion
+-   **Icons**: Lucide React
+-   **Maps**: Leaflet (React-Leaflet)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/polaroida.git
+    cd polaroida
+    ```
 
-## Deploy on Vercel
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Environment Setup**:
+    Create a `.env.local` file with your Supabase credentials:
+    ```env
+    NEXT_PUBLIC_SUPABASE_URL=your_project_url
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+
+## 📂 Project Structure
+
+-   `/app`: Next.js App Router pages and layouts.
+-   `/components`: Reusable UI components.
+-   `/lib`: Utility functions and Supabase client.
+-   `/database`: SQL migration scripts and schemas.
+-   `/public`: Static assets.
+
+## 📄 License
+
+MIT License. Created by [Your Name].

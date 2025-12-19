@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* --- THEME STYLES --- */
+
+/* Classic White (Simple, Clean, Standard) */
+:root,
+.theme-classic {
+  --background: #FAFAFA;
+  --foreground: #111111;
+  --accent: #C2252B;
+  --muted: #555555;
+  --border: #CCCCCC;
+  --polaroid-bg: #FFFFFF;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Vintage Film (Warm, Sepia, Nostalgic) */
+/* Vintage Film (Warm, Sepia, Nostalgic) - High Contrast Adjusted */
+.theme-vintage {
+  --background: #EFDECD;
+  /* Almond */
+  --foreground: #3E2723;
+  /* Very Dark Brown */
+  --accent: #A0522D;
+  /* Sienna */
+  --muted: #5D4037;
+  /* Darker Brown for secondary text */
+  --border: #A1887F;
+  /* Visible Border */
+  --polaroid-bg: #FDF5E6;
+  /* Old Lace */
+  --shadow-soft: 0 4px 14px rgba(62, 39, 35, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Minimal Black (High Contrast, Bold, Modern) */
+.theme-minimal {
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --accent: #FFFFFF;
+  /* White accent on black */
+  --muted: #A0A0A0;
+  --border: #333333;
+  --polaroid-bg: #121212;
+  --shadow-soft: 0 4px 24px rgba(255, 255, 255, 0.1);
 }
 
+/* Pastel Dream (Soft, Dreamy, Colorful) */
+.theme-pastel {
+  --background: #FDF2F8;
+  /* Pink/Rose water */
+  --foreground: #4A4E69;
+  --accent: #F472B6;
+  /* Pink-400 */
+  --muted: #9A8C98;
+  --border: #FBCFE8;
+  --polaroid-bg: #FFFFFF;
+  --shadow-soft: 0 6px 16px rgba(244, 114, 182, 0.15);
+}
+
+/* Darkroom Red (Safe light, Intense, Dark) */
+.theme-darkroom {
+  --background: #050505;
+  --foreground: #FF3B30;
+  /* Red Text */
+  --accent: #D70015;
+  --muted: #500000;
+  --border: #330000;
+  --polaroid-bg: #000000;
+  --shadow-soft: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Monochrome (Grayscale, Newspaper, Analog) */
+.theme-monochrome {
+  --background: #E5E5E5;
+  --foreground: #000000;
+  --accent: #333333;
+  --muted: #666666;
+  --border: #999999;
+  --polaroid-bg: #FFFFFF;
+  --shadow-soft: 4px 4px 0px rgba(0, 0, 0, 1);
+  /* Hard shadow */
+}
+
+
+
+/* Dark Mode Overrides Removed */
+
+/* Body defaults */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--background);
 }
