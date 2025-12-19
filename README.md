@@ -48,7 +48,7 @@
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/polaroida.git
+    git clone https://github.com/mrhdayat/polaroida.git
     cd polaroida
     ```
 
@@ -79,4 +79,4 @@
 
 ## 📄 License
 
-MIT License. Created by [Your Name].
+MIT License. Created by [M. Rahmat Hidayat].
